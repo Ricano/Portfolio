@@ -1,0 +1,435 @@
+:root{
+    --main-blue   : #1A4E8A;
+    --hard-blue   : #002B49;
+    --light-blue  : #6191B4; 
+    --lighter-blue: #A3C7D2;
+    --main-white  : #FFFAFA;
+    --main-red    : #DC143C;
+  
+    --max-width   : 1600px;
+
+    --border-smooth: 1px solid black;
+    --border-hard  : 5px solid black;
+  
+  
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--main-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+main {
+      width: var(--max-width);
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
+      -30px 0px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    }
+strong{
+  font-weight: bold;
+}
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  h2 {
+    font-size: 0.8rem;
+  }
+  .home-text {
+    display: flex;
+    flex: 0 1 38.2vw;
+    height: 38.2vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background: linear-gradient(to bottom, black, var(--main-blue));
+    color: var(--main-white);
+    min-height: 300px;
+  }
+  
+  .job{
+    color: rgb(230, 230, 230);
+  }
+  .tilted-tag {
+    color: var(--main-red);
+    transform: rotate(-20deg) translate(-3rem,-0.5rem);
+    font-size: 0.75rem;
+  }
+  .home-image {
+    background: url("./assets/exemplo11.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 61.8vh;
+    flex: 0 1 61.8vw;
+  }
+  
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1.6rem;
+    border: 1px #ccc solid;
+    margin: 0.5rem 0 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  img {
+    display: block; 
+   width: 100%;
+ }
+.work{
+    color: var(--main-white);
+    font-size: 2rem;
+    padding-top: 3rem;
+    background: linear-gradient(to bottom, black, var(--main-blue));
+    background: var(--hard-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sort{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+}
+.sort-link{
+    padding: 1rem;
+    margin: 1rem;
+    
+    border: 1px solid var(--main-white);
+    border-radius: 50%;
+}
+.sort-image{
+    width: 2.0rem;
+}
+.project-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:7rem;
+    color: var(--main-white);
+    margin-top: 6rem;
+}
+
+ .project{
+     color: var(--main-blue);
+display: flex;
+justify-content: center;
+align-items: flex-end;
+border-bottom: 1px solid var(--main-white);
+    width: 300px;
+    height: 550px;
+  
+  }
+.project-card{
+  display: flex;
+  flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+        font-family: Helvetica, sans-serif;
+        width: 280px;
+    margin-top: 2rem;    
+    margin-bottom: 2rem; 
+    border-radius: 20px 10px 0 0;   
+    background-color: var(--main-white);
+
+    height: 80%;
+      padding-left: 1rem;;
+      padding-right: 1rem;
+      box-shadow: 0 4px 8px 0 var(--main-white), 0 6px 10px 0 var(--main-white);
+    }
+    .card-image{
+      width: 80%;
+      position: relative;
+      bottom: 108px;
+    }
+    .card-title{
+      font-size: 1.8rem;
+        font-weight: bold;
+        position: relative;
+          bottom: 100px;
+    }
+    .tools{
+      width: 61.8%;
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      bottom: 80px;
+    
+    }
+    .tool{
+      width: 2rem;
+    }
+.card-text{
+  text-align: justify;
+  position: relative;
+      bottom: 30px;
+    
+}
+.link-box{
+  width: 100%;
+    display: flex;
+    align-items: center;
+justify-content: space-around;
+padding: 1rem;
+}
+.link, .sort{
+    width: 2.5rem;
+}
+.sort{
+  width: 2.5rem;
+}
+
+#trigger{
+  cursor: pointer;
+  transition: 0.3s;
+}
+#trigger:hover{
+  opacity: 0.7;
+}
+
+
+
+#myImg {
+  display: none;
+}
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close{
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,.close:focus{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+.about{
+    height: 100vh;
+    background-color: yellow;
+
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /*background: linear-gradient(to right, black, #1A4E8A);
+    */
+}
+
+
+.grid{
+    height: 85%;
+    width: 85%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    gap: 30px;
+    color: #000;
+    }
+  .grid-item{
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 5px solid fuchsia;
+    border-radius: 20px;
+  }
+  
+  
+  /* GRID CONFIG AND BACKGROUNDS*/
+  
+  .grid-1-4{
+    grid-column: span 4;
+  }
+  .grid-4-1{
+    grid-row: span 4;
+  }
+  .grid-1-2{
+    grid-column: span 2;
+  }
+  .grid-3-2{
+    grid-row: span 2;
+    grid-column: span 3;
+  }
+  .grid-1-3{
+    grid-column: span 3;
+  }
+  
+  
+  .project-item:nth-child(4){
+    background-image: url("./assets/1200px-Moon_0063_Nevit.svg.png");
+  }
+  
+#form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#name, #email{
+  height: 1.2rem;
+  width: 50%;
+  min-width: 13rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+}
+#text{
+  
+   resize: none; /* melhor seria ter uma caixa a aumentar conforme se fosse escrevendo */
+  width: 50%;
+  min-width: 13rem;
+  border-radius: 5px;
+  height: 3rem;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: red;
+}
+
+
+
+
+      /* Screen Sizes 500px and Up */
+@media (min-width: 600px) {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.2rem;
+      }
+      
+    
+    .home {
+        display: flex;
+      height: auto;
+      width: 100%;
+    }
+  
+    .home-text {
+    background: linear-gradient(to right, black, var(--main-blue));
+      height: 100vh;
+      width: 100%;
+      min-width: 400px;
+    }
+  
+    .home-image {
+      height: 100vh;
+      width: 100%;
+    }
+    .project-list{
+        height: fit-content;
+        min-height: 100vh;
+        display: flex;
+     flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+  }
+
+  /* Screen Sizes 700px and Up */
+@media (min-width: 700px) {
+  
+  
+    .btn:hover {
+      background: var(--main-white);
+      color: var(--main-blue);
+    }
+  }
